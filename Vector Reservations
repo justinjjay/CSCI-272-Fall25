@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+	vector <int> numbers;
+	
+	numbers.reserve(2);
+	
+	cout << "First EL = " << numbers.front() << endl;
+	cout << "Last El = " << numbers.back() << endl;
+	
+	
+	cout << "Reserved: " << endl << "Size = " << numbers.size()
+	<< ", Capacity = " << numbers.capacity() << endl << endl;
+	
+	
+	numbers.push_back(10);
+	cout << "After adding 10: " << endl << "Size = " << numbers.size() 
+	<< ", Capacity = " << numbers.capacity() << endl;
+	
+	cout << "First EL = " << numbers.front() << endl;                 
+	cout << "Last El = " << numbers.back() << endl << endl;
+	
+	numbers.push_back(20);
+	cout << "After adding 20: " << endl << "Size = " << numbers.size() 
+	<< ", Capacity = " << numbers.capacity() << endl;
+	  
+	cout << "First EL = " << numbers.front() << endl;                 
+	cout << "Last El = " << numbers.back() << endl << endl;
+	
+	numbers.push_back(40);
+	cout << "After adding 40: " << endl << "Size = " << numbers.size()
+	<< ", Capacity = " << numbers.capacity() << endl;
+	  
+	cout << "First EL = " << numbers.front() << endl;                 
+	cout << "Last El = " << numbers.back() << endl << endl;
+	
+
+}
