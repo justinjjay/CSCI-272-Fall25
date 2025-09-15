@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+
+//	string message = "Hello, World!";
+	
+//	int messageLength = message.length();
+//	int messageSize = message.size();
+	
+//	cout << "Length: " << messageLength << endl << "Size: " << messageSize << endl;
+	
+//	char firstChar = message [0];
+	//char lastChar = message [message.length()-1];
+	
+//	cout << "first char: " << firstChar << endl << "last char: " << lastChar << endl;
+
+	string str1 = "capple";
+	string str2 = "abanana";
+
+	if (str1 == str2){
+	cout << "Both strings are equal" << endl;
+	} else if (str1 > str2){
+		cout << "str1 is lexicographically greater than str2." << endl;
+	} else { 
+	cout << "str1 is lexicographically less than str2." << endl;
+}
+}
