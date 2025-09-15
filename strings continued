@@ -5,17 +5,24 @@ using namespace std;
 
 int main() {
 
-//	string message = "Hello, World!";
+	string message = "Hello, World!";
 	
-//	int messageLength = message.length();
-//	int messageSize = message.size();
+	int messageLength = message.length();
+	int messageSize = message.size();
 	
-//	cout << "Length: " << messageLength << endl << "Size: " << messageSize << endl;
+	cout << "Length: " << messageLength << endl << "Size: " << messageSize << endl;
 	
-//	char firstChar = message [0];
+	char firstChar = message [0];
 	//char lastChar = message [message.length()-1];
 	
-//	cout << "first char: " << firstChar << endl << "last char: " << lastChar << endl;
+	cout << "first char: " << firstChar << endl << "last char: " << lastChar << endl;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
 
 	string str1 = "capple";
 	string str2 = "abanana";
@@ -27,4 +34,37 @@ int main() {
 	} else { 
 	cout << "str1 is lexicographically less than str2." << endl;
 }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+#include <string>
+#include <cctype> // tolower()/toupper()
+
+using namespace std;
+
+//case insensituve comparison
+bool caseInsensitiveCompare(const string& str1, const string& str2){
+	if (str1.length() != str2.length()){
+		return false;
+	}
+	for (size_t i = 0; i < str1.length(); i++){
+		if(tolower(str1[i]) != tolower(str2[i])){
+			return false;
+		}
+	}
+	return true;
+}
+
+int main (){
+	string str1 = "Hello";
+	string str2 = "hello";
+	
+	if(caseInsensitiveCompare(str1, str2)){
+		cout << "Strings are case sensitive equal" << endl;
+	} else {
+		cout << "strings are NOT case sensitive equal" << endl;
+	}
+	
+	return 0;
 }
