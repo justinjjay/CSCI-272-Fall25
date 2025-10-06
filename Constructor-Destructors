@@ -1,0 +1,75 @@
+//Destructors
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Car {
+private:
+	string brand{"Toyota"};
+	string model="Camry";
+	int year {2022};
+public:
+	Car(){
+		// nothing here default handles it
+	}
+	//destructor
+	~Car() {
+		cout << "Destroy " << brand << " " << model << " " << year << " " << endl;
+		
+	};
+	
+	//Parameterized constructor
+	Car(string b, string m, int y){
+		brand = b;
+		model = m;
+		year = y;
+	}
+	
+	//Copy contrsutor
+	Car(const & other){
+		brand = other.brand;
+		model = other.model;
+		year = other.year + 1;
+	}
+	
+	void startEngine(){
+		cout << "Start Engine for: " << "Brand: " << brand << " Model: " << model << "Year: " << year << endl;
+	}
+	
+	void accelerate(){
+		cout << "Accelerate engine for: " << "Brand: " << brand << " Model: " << model << "Year: " << year << endl;
+		
+		return 0;
+}
+
+??????????????????????????? Figure out what to fix?????????????????????????????????????????????????????????????????
+
+#include "Car.h"
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	// create a car object
+	Car car1;
+	
+	//parameter
+	Car car2("Honda", "Civic", 2024);
+	
+	//copy constructor
+	Car car3(car2);
+	
+	//Copy 2
+	Car car4(car3);
+	
+	//call member functions
+	car1.startEngine();
+	car2.startEngine();
+	car3.startEngine();
+	car4.startEngine();
+	
+	car2.accelerate();
+	car3.accelerate();
+}
